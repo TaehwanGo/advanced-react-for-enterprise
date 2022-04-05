@@ -27,3 +27,11 @@
 - organisms
 - foundation
 - globalStyles
+
+## 1-4. Define system variables
+
+- 디자인 시스템 figma : https://www.figma.com/file/EX8VxcTtAatzI2PBLb361g/designsystems.engineering?node-id=99%3A0
+- 프로젝트에서 사용할 아래 항목들을 정의
+  - colors
+  - typography : font families, font sizes, font weight
+  - breakpoints
