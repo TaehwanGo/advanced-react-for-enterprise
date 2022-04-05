@@ -7,7 +7,7 @@
 
 ## Contents
 
-- [ ] 0. Introduction to design systems
+- [x] 0. Introduction to design systems
 - [ ] 1. CSS Architecture
 - [ ] 2. Monorepositories
 - [ ] 3. Implementation of React

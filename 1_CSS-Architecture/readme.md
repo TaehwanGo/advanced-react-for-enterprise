@@ -19,3 +19,11 @@
 - Easy to understand (comments, variables)
 - Fully customizable / themeable
 - Reusable across teams / projects
+
+## 1-3. Setup folder and file structure
+
+- atoms
+- molecules
+- organisms
+- foundation
+- globalStyles
