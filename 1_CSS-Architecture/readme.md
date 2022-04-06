@@ -63,3 +63,31 @@
 
 - figma를 보고 나머지 typography를 완성하기 - skip
   - line-height, letter-spacing 등
+
+## 1-9. Define mixins
+
+- 중복을 피하고 재사용성을 높이기 위해 mixins가 존재
+- 만약 mixins가 너무 길어지면 foundation 같이 폴더를 하나 만들고 그 안에 각각의 mixins 파일들을 import 해도 됨
+
+- mixins로 선언 하고 include로 불러올 수 있음
+
+```scss
+@mixin tablet {
+  @media (min-width: map-get($breakpoints, "md")) {
+    @content;
+  }
+}
+
+// 사용 예
+.given-exam {
+  font-size: 12px;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include laptop {
+    font-size: 16px;
+  }
+}
+```
