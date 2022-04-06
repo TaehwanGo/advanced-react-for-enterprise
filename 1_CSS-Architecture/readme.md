@@ -54,3 +54,7 @@
 
 - figma를 보고 colors 에 나머지 추가하기
   - 생략
+
+## 1-7. Define foundation typography
+
+- colors(1-5.)에서 했던 것과 동일
