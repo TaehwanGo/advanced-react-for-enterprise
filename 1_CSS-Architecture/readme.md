@@ -35,3 +35,17 @@
   - colors
   - typography : font families, font sizes, font weight
   - breakpoints
+
+## 1-5. Define foundation colors
+
+- variables에 있는 color는 의미가 없는 컬러들 - 공용
+- colors에 있는 color는 의미가 있는 컬러들
+
+  - $body-text-color: $dark;
+    - $dark를 사용하면 CSS로 변환될 때 고정된 컬러가 되므로 CSS 변수 형태로 사용
+    - $body-text-color: var(--dse-body-text-color, $dark) !default;
+      - dse : design system for engineering
+  - ...
+
+- extension : SCSS IntelliSense
+- 다른 scss파일에 있는 변수를 자동완성 시켜줌
