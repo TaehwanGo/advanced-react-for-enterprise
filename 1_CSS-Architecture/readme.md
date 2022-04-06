@@ -58,3 +58,8 @@
 ## 1-7. Define foundation typography
 
 - colors(1-5.)에서 했던 것과 동일
+
+## 1-8. Assignment - Define foundation typography
+
+- figma를 보고 나머지 typography를 완성하기 - skip
+  - line-height, letter-spacing 등
