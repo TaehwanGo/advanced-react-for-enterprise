@@ -49,3 +49,8 @@
 
 - extension : SCSS IntelliSense
 - 다른 scss파일에 있는 변수를 자동완성 시켜줌
+
+## 1-6. Assignment - Define foundation colors
+
+- figma를 보고 colors 에 나머지 추가하기
+  - 생략
