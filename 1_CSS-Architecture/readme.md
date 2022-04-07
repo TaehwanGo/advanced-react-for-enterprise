@@ -96,3 +96,18 @@
 
 - spacing 을 정해서 정해진 spacing을 사용
   - margin 같은 곳에서 사용
+
+## 1-11. Global root and css reset
+
+- global.scss에 포함될 것들
+
+  - foundation 에 있는 모든 것들을 export
+  - base : root variables, reset css
+    - root엔 scss변수가 아닌 css변수들이 포함 됨
+
+- Normalize.css
+  - 브라우저별로 다른 css를 알아서 채워줌
+
+`cd scss`
+
+`yarn add normalize-scss`
