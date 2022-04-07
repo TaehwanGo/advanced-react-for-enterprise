@@ -91,3 +91,8 @@
   }
 }
 ```
+
+## 1-10. Assignment - Define mixins
+
+- spacing 을 정해서 정해진 spacing을 사용
+  - margin 같은 곳에서 사용
