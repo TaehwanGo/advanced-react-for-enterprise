@@ -111,3 +111,30 @@
 `cd scss`
 
 `yarn add normalize-scss`
+
+## 1-12. Add styleLint and prettier
+
+- team project는 많은 룰을 가지고 있어야 한다
+
+  - 들여쓰기, 함수 정의 시 동사를 어떤 것을 쓸 것인지 등
+
+- 우리는 룰을 정하기 위한 툴로 style lint와 prettier를 사용할 것이다
+  - style lint : how to code work
+    - mixins, function, variables, ...
+  - prettier : formatting
+    - indentation(들여쓰기) spaces, top sizes, ... , configurations relating to formatting
+
+`yarn add --dev stylelint stylelint-config-sass-guidelines stylelint-config-prettier stylelint-prettier prettier`
+
+- stylelint : css 문법 검사
+- styledlint-config-sass-guidelines : An opinionated styleguide for writing sane, maintainable and scalable Sass.
+  - https://sass-guidelin.es/
+- stylelint-config-prettier : 불필요하거나 prettier와 충돌할 수 있는 모든 규칙을 끕니다.
+  - prettier가 formatting을 담당하는데 stylelint의 포맷팅 관련된 것을 모두 끔
+- stylelint-prettier : Runs Prettier as a Stylelint rule and reports differences as individual Stylelint issues.
+
+.stylelintrc.json에 extends 설정
+
+`stylelint './**/*.scss' --fix` : 자동으로 에러가 난 부분을 수정
+
+- 자동 수정이 안되는 부분은 수동으로 수정해줘야 함
