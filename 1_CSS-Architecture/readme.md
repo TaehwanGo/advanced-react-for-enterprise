@@ -138,3 +138,16 @@
 `stylelint './**/*.scss' --fix` : 자동으로 에러가 난 부분을 수정
 
 - 자동 수정이 안되는 부분은 수동으로 수정해줘야 함
+
+## 1-13. Setup husky and pre-commit hooks
+
+lint를 자동으로 하도록 돕는 git hooks
+
+- husky
+- lint-staged : Git의 Staged된 상태에 파일들에 특정 명령어를 실행할 수 있도록 해주는 툴입니다.
+  - 참고 : https://dev-yakuza.posstree.com/ko/react/husky-lint-staged/
+  - staged 된 git files에 💩 같은 코드가 코드에 들어가지 않도록 함
+
+`yarn add --dev husky lint-staged`
+
+`chmod +x .husky/*`

@@ -1,0 +1,32 @@
+{
+  "name": "advanced-react-for-enterprise",
+  "version": "1.0.0",
+  "description": "- A practical deep dive into building, scaling and maintaining   high-quality design systems for software engineers. - Reference : https://www.udemy.com/course/react-for-senior-engineers/ - Instructor : [Kati Frantz](https://www.udemy.com/course/react-for-senior-engineers/#instructor-1) - source code : https://github.com/bahdcoder/ds.e",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint:style": "stylelint './**/*.scss'",
+    "lint:fix": "yarn lint:style --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TaehwanGo/advanced-react-for-enterprise.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TaehwanGo/advanced-react-for-enterprise/issues"
+  },
+  "homepage": "https://github.com/TaehwanGo/advanced-react-for-enterprise#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.7",
+    "prettier": "^2.6.2",
+    "stylelint": "^14.6.1",
+    "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-sass-guidelines": "^9.0.1",
+    "stylelint-prettier": "^2.0.0"
+  }
+}
