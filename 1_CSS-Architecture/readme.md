@@ -151,3 +151,7 @@ lint를 자동으로 하도록 돕는 git hooks
 `yarn add --dev husky lint-staged`
 
 `chmod +x .husky/*`
+
+## 1-14. Compiles scss to css
+
+`yarn add --dev node-sass`

@@ -4,12 +4,16 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "node src/scripts/build.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "normalize-scss": "^7.0.1"
+  },
+  "devDependencies": {
+    "node-sass": "^7.0.1"
   }
 }
