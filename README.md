@@ -10,7 +10,7 @@
 
 - [x] 0. Introduction to design systems
 - [x] 1. CSS Architecture
-- [ ] 2. Monorepositories
+- [x] 2. Monorepositories
 - [ ] 3. Implementation of React
 - [ ] 4. Accessibility for the select component
 - [ ] 5. Unit testing atomic components
