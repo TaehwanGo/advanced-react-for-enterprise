@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint:style": "stylelint './**/*.scss'",
-    "lint:fix": "yarn lint:style --fix"
+    "lint:fix": "yarn lint:style --fix",
+    "build": "yarn lerna run build"
   },
   "repository": {
     "type": "git",
@@ -19,14 +20,23 @@
     "url": "https://github.com/TaehwanGo/advanced-react-for-enterprise/issues"
   },
   "homepage": "https://github.com/TaehwanGo/advanced-react-for-enterprise#readme",
-  "dependencies": {},
   "devDependencies": {
     "husky": "^7.0.4",
+    "lerna": "^4.0.0",
     "lint-staged": "^12.3.7",
     "prettier": "^2.6.2",
     "stylelint": "^14.6.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-sass-guidelines": "^9.0.1",
     "stylelint-prettier": "^2.0.0"
-  }
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ],
+    "nohoist": [
+      "**/normalize-scss"
+    ]
+  },
+  "private": "true"
 }
