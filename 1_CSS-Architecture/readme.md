@@ -155,3 +155,8 @@ lint를 자동으로 하도록 돕는 git hooks
 ## 1-14. Compiles scss to css
 
 `yarn add --dev node-sass`
+
+## 1-15. Compile components to css
+
+- compile function을 만들음
+- scss를 css로 compile
