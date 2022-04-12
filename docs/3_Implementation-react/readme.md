@@ -41,3 +41,51 @@ react의 package.json에서 script -> build
   - c 옵션은 rollup.config.js를 사용하겠다는 의미
 
 다음 강의에선 이것들이 실제로 동작하는 것들을 확인
+
+## 23. Setup a react playground
+
+- 예상한 대로 동작하는지 테스트 할 수 있는 플레이그라운드를 만들어 볼 것을 추천한다
+- playgrounds
+
+  - part of workspace => package.json의 workspaces에 추가
+  - import the packages
+
+- playgrounds/react
+
+  - yarn init -y
+  - yarn add react @types/react typescript parcel-bundler
+  - yarn add react-dom @types/react-dom
+
+- monorepo로 관리할 땐 node_modules의 호이스팅을 이용해서 서로 다른 packages안에 서로 다른 프로젝트들에
+  중복된 library가 필요할 때 용량을 줄일 수 있다
+
+- package.json에 main은 무엇을 export 할지 명시해줌
+
+```json
+"main": "lib/index.js"
+```
+
+```tsx
+import ReactDom from "react-dom";
+import { Button } from "@ds.e/react";
+
+ReactDom.render(
+  <Button label="Example Button" />,
+  document.querySelector("#root")
+);
+```
+
+- React 18에서 더 이상 지원되지 않음
+- createRoot를 사용해야 함
+- https://reactjs.org/blog/2022/03/08/react-18-upgrade-guide.html#updates-to-client-rendering-apis
+
+```tsx
+import { createRoot } from "react-dom/client";
+import { Button } from "@ds.e/react";
+
+const rootContainer = document.querySelector("#rout") as Element;
+const root = createRoot(rootContainer);
+root.render(<Button label="Example Button" />);
+```
+
+- 뭐지? 언제부터 react root가 rout이 되었네
