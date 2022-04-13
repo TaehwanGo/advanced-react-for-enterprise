@@ -89,3 +89,19 @@ root.render(<Button label="Example Button" />);
 ```
 
 - 뭐지? 언제부터 react root가 rout이 되었네
+
+#### packages의 react를 가져와봤으니 packages의 scss도 사용해보자
+
+## 24. Setup dev script for all packages
+
+- packages의 변화를 감지할 수 있는 nodemon을 설치
+  - packages안에 있는 레포들(react, scss)에 각각 nodemon script 설정
+
+`yarn add --dev nodemon`
+
+- react package엔 nodemon이 아닌 build --watch 모드로 실행하는 구나
+
+- playground, packages/\* 모두 dev 스크립트로 실행되니
+  root dir package.json에서 lerna를 통해 dev스크립트를 설정하여 공통으로 실행할 수 있게 함
+  - root dir에서 yarn dev 실행 시 모든 패키지들의 dev 스크립트가 실행 됨
+  - packages의 scss 또는 react 패키지에서 무언가를 변경 후 저장하면 자동으로 반영 됨

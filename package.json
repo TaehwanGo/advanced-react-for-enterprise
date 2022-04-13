@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint:style": "stylelint './packages/scss/**/*.scss'",
     "lint:fix": "yarn lint:style --fix",
-    "build": "yarn lerna run build"
+    "build": "yarn lerna run build",
+    "dev": "yarn lerna run dev"
   },
   "repository": {
     "type": "git",
