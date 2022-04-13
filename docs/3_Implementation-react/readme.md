@@ -105,3 +105,19 @@ root.render(<Button label="Example Button" />);
   root dir package.json에서 lerna를 통해 dev스크립트를 설정하여 공통으로 실행할 수 있게 함
   - root dir에서 yarn dev 실행 시 모든 패키지들의 dev 스크립트가 실행 됨
   - packages의 scss 또는 react 패키지에서 무언가를 변경 후 저장하면 자동으로 반영 됨
+
+## 25. Identify atoms, molecules and organisms
+
+- atoms
+  - 컬러
+  - 아이콘
+  - 텍스트
+- molecules
+  - 셀렉트 아이템들
+    - 컬러, label(레이블), 백그라운드로 이루어진 하나의 박스
+- organisms
+  - molecules의 조합을 모아놓은 드롭다운 컴포넌트
+
+## 26. Assignment - 카드 컴포넌트 아토믹디자인으로 만들어보기
+
+- 스킵
