@@ -132,3 +132,5 @@ root.render(<Button label="Example Button" />);
   - m1 mac에서 발생하는 이슈
 - 시도 : yarn add sass --save-dev
   - 참고 : https://im-designloper.tistory.com/51
+
+## 28. Dynamically generate utility classes
