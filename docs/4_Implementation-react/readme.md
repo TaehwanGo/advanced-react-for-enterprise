@@ -124,6 +124,8 @@ root.render(<Button label="Example Button" />);
 
 ## 27. Develop the color component
 
+- color 컴포넌트를 만들어보자
+
 ### 이슈
 
 - Error: Node Sass does not yet support your current environment: OS X Unsupported architecture (arm64) with Unsupported runtime (108)
