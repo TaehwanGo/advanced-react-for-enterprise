@@ -134,3 +134,15 @@ root.render(<Button label="Example Button" />);
   - 참고 : https://im-designloper.tistory.com/51
 
 ## 28. Dynamically generate utility classes
+
+## 29. Assignment - create image atom
+
+- 생략
+
+## 30. Extract foundation to a separate package
+
+- react에 종속되어 있었던 foundation을 별도의 패키지로 분리
+
+- cd packages/foundation
+- yarn init -y
+- yarn add --dev typescript

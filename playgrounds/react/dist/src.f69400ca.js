@@ -32852,14 +32852,14 @@ const Button = ({
 };
 
 exports.default = Button;
-},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds.e/react/lib/foundation/Spacing.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds.e/foundation/lib/Spacing.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.default = void 0;
-const spaces = {
+var spaces = {
   xxxs: "xxxs",
   // 4px
   xxs: "xxs",
@@ -32876,12 +32876,67 @@ const spaces = {
   // 48px
   xxl: "xxl",
   // 72px
-  xxxl: "xxxl" // 96px
-
+  xxxl: "xxxl"
 };
-var Spacing = Object.freeze(spaces);
-exports.default = Spacing;
-},{}],"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js":[function(require,module,exports) {
+
+var _default = Object.freeze(spaces);
+
+exports.default = _default;
+},{}],"../../../node_modules/@ds.e/foundation/lib/FontSize.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+var fontSizes = {
+  xxxs: "xxxs",
+  // 4px
+  xxs: "xxs",
+  // 8px
+  xs: "xs",
+  // 12px
+  sm: "sm",
+  // 16px
+  md: "md",
+  // 24px
+  lg: "lg",
+  // 32px
+  xl: "xl",
+  // 48px
+  xxl: "xxl",
+  // 72px
+  xxxl: "xxxl"
+};
+
+var _default = Object.freeze(fontSizes);
+
+exports.default = _default;
+},{}],"../../../node_modules/@ds.e/foundation/lib/index.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+Object.defineProperty(exports, "FontSize", {
+  enumerable: true,
+  get: function () {
+    return _FontSize.default;
+  }
+});
+Object.defineProperty(exports, "Spacing", {
+  enumerable: true,
+  get: function () {
+    return _Spacing.default;
+  }
+});
+
+var _Spacing = _interopRequireDefault(require("./Spacing"));
+
+var _FontSize = _interopRequireDefault(require("./FontSize"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+},{"./Spacing":"../../../node_modules/@ds.e/foundation/lib/Spacing.js","./FontSize":"../../../node_modules/@ds.e/foundation/lib/FontSize.js"}],"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32891,14 +32946,14 @@ exports.default = void 0;
 
 var _react = _interopRequireDefault(require("react"));
 
-var _Spacing = _interopRequireDefault(require("../../foundation/Spacing.js"));
+var _foundation = require("@ds.e/foundation");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 const Color = ({
   hexCode,
-  width = _Spacing.default.sm,
-  height = _Spacing.default.sm
+  width = _foundation.Spacing.sm,
+  height = _foundation.Spacing.sm
 }) => {
   const className = `dse-width-${width} dse-height-${height}`;
   return _react.default.createElement("div", {
@@ -32910,7 +32965,7 @@ const Color = ({
 };
 
 exports.default = Color;
-},{"react":"../../../node_modules/react/index.js","../../foundation/Spacing.js":"../../../node_modules/@ds.e/react/lib/foundation/Spacing.js"}],"../../../node_modules/@ds.e/react/lib/index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","@ds.e/foundation":"../../../node_modules/@ds.e/foundation/lib/index.js"}],"../../../node_modules/@ds.e/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32928,21 +32983,13 @@ Object.defineProperty(exports, "Color", {
     return _Color.default;
   }
 });
-Object.defineProperty(exports, "Spacing", {
-  enumerable: true,
-  get: function () {
-    return _Spacing.default;
-  }
-});
 
 var _Button = _interopRequireDefault(require("./atoms/Button/Button.js"));
 
 var _Color = _interopRequireDefault(require("./atoms/Color/Color.js"));
 
-var _Spacing = _interopRequireDefault(require("./foundation/Spacing.js"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./atoms/Button/Button.js":"../../../node_modules/@ds.e/react/lib/atoms/Button/Button.js","./atoms/Color/Color.js":"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js","./foundation/Spacing.js":"../../../node_modules/@ds.e/react/lib/foundation/Spacing.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Button/Button.js":"../../../node_modules/@ds.e/react/lib/atoms/Button/Button.js","./atoms/Color/Color.js":"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -33034,16 +33081,18 @@ require("@ds.e/scss/lib/Button.css");
 
 require("@ds.e/scss/lib/Utilities.css");
 
+var _foundation = require("@ds.e/foundation");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var rootContainer = document.querySelector("#rout");
 var root = (0, _client.createRoot)(rootContainer);
 root.render(_react.default.createElement(_react2.Color, {
   hexCode: "#000",
-  width: _react2.Spacing.sm,
-  height: _react2.Spacing.sm
+  width: _foundation.Spacing.sm,
+  height: _foundation.Spacing.sm
 })); // css class in scss file을 사용해보자
-},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/Button.css":"../../../node_modules/@ds.e/scss/lib/Button.css","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/Button.css":"../../../node_modules/@ds.e/scss/lib/Button.css","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css","@ds.e/foundation":"../../../node_modules/@ds.e/foundation/lib/index.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -33071,7 +33120,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50426" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62040" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
