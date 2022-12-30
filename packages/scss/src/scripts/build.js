@@ -3,7 +3,7 @@ const Fs = require("fs"); // 파일을 읽고 쓸 수 있음 - file system
 
 const Path = require("path"); // 파일들의 경로를 올바르게 가져오기 위해
 
-const Sass = require("node-sass");
+const Sass = require("sass");
 
 const getComponents = () => {
   let allComponents = [];

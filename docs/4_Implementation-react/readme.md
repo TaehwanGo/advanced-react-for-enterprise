@@ -121,3 +121,12 @@ root.render(<Button label="Example Button" />);
 ## 26. Assignment - 카드 컴포넌트 아토믹디자인으로 만들어보기
 
 - 스킵
+
+## 27. Develop the color component
+
+### 이슈
+
+- Error: Node Sass does not yet support your current environment: OS X Unsupported architecture (arm64) with Unsupported runtime (108)
+  - m1 mac에서 발생하는 이슈
+- 시도 : yarn add sass --save-dev
+  - 참고 : https://im-designloper.tistory.com/51
