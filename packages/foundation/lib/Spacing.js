@@ -1,4 +1,5 @@
 var spaces = {
+    none: "none",
     xxxs: "xxxs",
     // 4px
     xxs: "xxs",

@@ -146,3 +146,35 @@ root.render(<Button label="Example Button" />);
 - cd packages/foundation
 - yarn init -y
 - yarn add --dev typescript
+
+## 31. Spacing component
+
+- spacing 컴포넌트를 만들어보자
+- margin, padding을 조절할 수 있는 컴포넌트
+
+### Error: Could not resolve entry module (src/atoms/Margin).
+
+```js
+// rollup.config.js
+
+import Ts from "rollup-plugin-typescript2";
+
+export default {
+  input: [
+    "src/index.ts",
+    "src/atoms/Button/index.ts",
+    "src/atoms/Margin/index.ts",
+  ],
+  output: {
+    dir: "lib",
+    format: "esm",
+    sourcemap: true,
+  },
+  plugins: [Ts()],
+  preserveModules: true, // preserve source folder
+  external: ["react", "@ds.e/foundation"],
+};
+```
+
+- "src/atoms/Margin/index.ts"를 다 적어줘야 함
+  - "src/atoms/Margin"만 적어주면 에러 발생

@@ -32860,6 +32860,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 var spaces = {
+  none: "none",
   xxxs: "xxxs",
   // 4px
   xxs: "xxs",
@@ -32965,7 +32966,56 @@ const Color = ({
 };
 
 exports.default = Color;
-},{"react":"../../../node_modules/react/index.js","@ds.e/foundation":"../../../node_modules/@ds.e/foundation/lib/index.js"}],"../../../node_modules/@ds.e/react/lib/index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","@ds.e/foundation":"../../../node_modules/@ds.e/foundation/lib/index.js"}],"../../../node_modules/@ds.e/react/lib/atoms/Margin/Margin.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireDefault(require("react"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+const Margin = ({
+  space = "xxxs",
+  children,
+  left,
+  right,
+  top,
+  bottom
+}) => {
+  // dse-margin-left-sm
+  let className = ``;
+
+  if (!left && !right && !top && !bottom) {
+    className = `dse-margin-${space}`;
+  }
+
+  if (left) {
+    className = `${className} dse-margin-left-${space}`;
+  }
+
+  if (right) {
+    className = `${className} dse-margin-right-${space}`;
+  }
+
+  if (top) {
+    className = `${className} dse-margin-top-${space}`;
+  }
+
+  if (bottom) {
+    className = `${className} dse-margin-bottom-${space}`;
+  }
+
+  return _react.default.createElement("div", {
+    className: className
+  }, children);
+};
+
+exports.default = Margin;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds.e/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -32983,13 +33033,21 @@ Object.defineProperty(exports, "Color", {
     return _Color.default;
   }
 });
+Object.defineProperty(exports, "Margin", {
+  enumerable: true,
+  get: function () {
+    return _Margin.default;
+  }
+});
 
 var _Button = _interopRequireDefault(require("./atoms/Button/Button.js"));
 
 var _Color = _interopRequireDefault(require("./atoms/Color/Color.js"));
 
+var _Margin = _interopRequireDefault(require("./atoms/Margin/Margin.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./atoms/Button/Button.js":"../../../node_modules/@ds.e/react/lib/atoms/Button/Button.js","./atoms/Color/Color.js":"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Button/Button.js":"../../../node_modules/@ds.e/react/lib/atoms/Button/Button.js","./atoms/Color/Color.js":"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js","./atoms/Margin/Margin.js":"../../../node_modules/@ds.e/react/lib/atoms/Margin/Margin.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -33068,6 +33126,12 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@ds.e/scss/lib/Margin.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
 },{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.tsx":[function(require,module,exports) {
 "use strict";
 
@@ -33081,18 +33145,17 @@ require("@ds.e/scss/lib/Button.css");
 
 require("@ds.e/scss/lib/Utilities.css");
 
-var _foundation = require("@ds.e/foundation");
+require("@ds.e/scss/lib/Margin.css");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var rootContainer = document.querySelector("#rout");
 var root = (0, _client.createRoot)(rootContainer);
-root.render(_react.default.createElement(_react2.Color, {
-  hexCode: "#000",
-  width: _foundation.Spacing.sm,
-  height: _foundation.Spacing.sm
-})); // css class in scss file을 사용해보자
-},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/Button.css":"../../../node_modules/@ds.e/scss/lib/Button.css","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css","@ds.e/foundation":"../../../node_modules/@ds.e/foundation/lib/index.js"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+root.render(_react.default.createElement(_react2.Margin, {
+  left: true,
+  space: "none"
+}, _react.default.createElement("div", null, "this is some text"))); // css class in scss file을 사용해보자
+},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/Button.css":"../../../node_modules/@ds.e/scss/lib/Button.css","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css","@ds.e/scss/lib/Margin.css":"../../../node_modules/@ds.e/scss/lib/Margin.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -33120,7 +33183,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62040" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57091" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

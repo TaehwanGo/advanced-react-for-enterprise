@@ -1,4 +1,5 @@
 declare const _default: Readonly<{
+    readonly none: "none";
     readonly xxxs: "xxxs";
     readonly xxs: "xxs";
     readonly xs: "xs";
