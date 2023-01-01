@@ -178,3 +178,5 @@ export default {
 
 - "src/atoms/Margin/index.ts"를 다 적어줘야 함
   - "src/atoms/Margin"만 적어주면 에러 발생
+
+## 32. The select molecule
