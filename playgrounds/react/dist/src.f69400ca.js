@@ -33070,9 +33070,26 @@ const Select = ({
     setIsOpen(prev => !prev);
   };
 
-  return _react.default.createElement("div", null, _react.default.createElement("button", {
+  return _react.default.createElement("div", {
+    className: "dse-select"
+  }, _react.default.createElement("button", {
+    className: "dse-select__label",
     onClick: () => onLabelClick()
-  }, label), isOpen && _react.default.createElement("ul", null, options.map((option, index) => {
+  }, _react.default.createElement("span", null, label), _react.default.createElement("svg", {
+    width: "1rem",
+    height: "1rem",
+    xmlns: "http://www.w3.org/2000/svg",
+    fill: "none",
+    viewBox: "0 0 24 24",
+    strokeWidth: 1.5,
+    stroke: "currentColor"
+  }, _react.default.createElement("path", {
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    d: "M19.5 8.25l-7.5 7.5-7.5-7.5"
+  }))), isOpen && _react.default.createElement("ul", {
+    className: "dse-select__overlay"
+  }, options.map((option, index) => {
     return _react.default.createElement("li", {
       key: option.value,
       onClick: () => {
@@ -33222,6 +33239,12 @@ module.exports = reloadCSS;
         module.hot.dispose(reloadCSS);
         module.hot.accept(reloadCSS);
       
+},{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../../../node_modules/@ds.e/scss/lib/Select.css":[function(require,module,exports) {
+
+        var reloadCSS = require('_css_loader');
+        module.hot.dispose(reloadCSS);
+        module.hot.accept(reloadCSS);
+      
 },{"_css_loader":"../../../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"index.tsx":[function(require,module,exports) {
 "use strict";
 
@@ -33239,6 +33262,8 @@ require("@ds.e/scss/lib/Margin.css");
 
 require("@ds.e/scss/lib/Text.css");
 
+require("@ds.e/scss/lib/Select.css");
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var rootContainer = document.querySelector("#rout");
@@ -33255,8 +33280,8 @@ var options = [{
 }];
 root.render(_react.default.createElement("div", null, _react.default.createElement(_react2.Select, {
   options: options
-}))); // css class in scss file을 사용해보자
-},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/Button.css":"../../../node_modules/@ds.e/scss/lib/Button.css","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css","@ds.e/scss/lib/Margin.css":"../../../node_modules/@ds.e/scss/lib/Margin.css","@ds.e/scss/lib/Text.css":"../../../node_modules/@ds.e/scss/lib/Text.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+}), _react.default.createElement("p", null, "this is some text"))); // css class in scss file을 사용해보자
+},{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/Button.css":"../../../node_modules/@ds.e/scss/lib/Button.css","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css","@ds.e/scss/lib/Margin.css":"../../../node_modules/@ds.e/scss/lib/Margin.css","@ds.e/scss/lib/Text.css":"../../../node_modules/@ds.e/scss/lib/Text.css","@ds.e/scss/lib/Select.css":"../../../node_modules/@ds.e/scss/lib/Select.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -33284,7 +33309,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52823" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "60345" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

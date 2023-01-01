@@ -98,42 +98,26 @@
  *
  */
 /* p-l, p-r 같이 나눠서 만들 수도 있음 */
-.dse-text-none {
-  font-size: 0rem;
+.dse-select {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
-
-.dse-text-xxxs {
-  font-size: 0.25rem;
+.dse-select__label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem;
+  border: 1px solid var(--dse-form-border-color, #f1f2f3);
+  background: var(--dse-form-bg-color, #fff);
+  cursor: pointer;
 }
-
-.dse-text-xxs {
-  font-size: 0.5rem;
-}
-
-.dse-text-xs {
-  font-size: 0.75rem;
-}
-
-.dse-text-sm {
-  font-size: 1rem;
-}
-
-.dse-text-md {
-  font-size: 1.5rem;
-}
-
-.dse-text-lg {
-  font-size: 2rem;
-}
-
-.dse-text-xl {
-  font-size: 3rem;
-}
-
-.dse-text-xxl {
-  font-size: 4.5rem;
-}
-
-.dse-text-xxxl {
-  font-size: 6rem;
+.dse-select__overlay {
+  padding: 0rem;
+  margin: 0rem;
+  border: 1px solid var(--dse-form-border-color, #f1f2f3);
+  background-color: var(--dse-form-bg-color, #fff);
+  z-index: 99;
+  position: absolute;
+  width: 100%;
 }

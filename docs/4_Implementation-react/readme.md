@@ -182,3 +182,11 @@ export default {
 ## 32. The select molecule
 
 - Select 컴포넌트를 만들어보자
+
+## 33. Styles for the select molecule
+
+- 아이콘은 heroicons을 사용
+  - https://heroicons.com/
+- html to JSX에서 html을 jsx로 변환
+  - https://magic.reactjs.net/htmltojsx.htm
+  - 그런데 이미 heroicons에서 JSX copy 버전을 제공하고 있음
