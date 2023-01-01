@@ -33040,7 +33040,50 @@ const Text = ({
 };
 
 exports.default = Text;
-},{"react":"../../../node_modules/react/index.js","@ds.e/foundation":"../../../node_modules/@ds.e/foundation/lib/index.js"}],"../../../node_modules/@ds.e/react/lib/index.js":[function(require,module,exports) {
+},{"react":"../../../node_modules/react/index.js","@ds.e/foundation":"../../../node_modules/@ds.e/foundation/lib/index.js"}],"../../../node_modules/@ds.e/react/lib/molecules/Select/Select.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = void 0;
+
+var _react = _interopRequireWildcard(require("react"));
+
+function _getRequireWildcardCache(nodeInterop) { if (typeof WeakMap !== "function") return null; var cacheBabelInterop = new WeakMap(); var cacheNodeInterop = new WeakMap(); return (_getRequireWildcardCache = function (nodeInterop) { return nodeInterop ? cacheNodeInterop : cacheBabelInterop; })(nodeInterop); }
+
+function _interopRequireWildcard(obj, nodeInterop) { if (!nodeInterop && obj && obj.__esModule) { return obj; } if (obj === null || typeof obj !== "object" && typeof obj !== "function") { return { default: obj }; } var cache = _getRequireWildcardCache(nodeInterop); if (cache && cache.has(obj)) { return cache.get(obj); } var newObj = {}; var hasPropertyDescriptor = Object.defineProperty && Object.getOwnPropertyDescriptor; for (var key in obj) { if (key !== "default" && Object.prototype.hasOwnProperty.call(obj, key)) { var desc = hasPropertyDescriptor ? Object.getOwnPropertyDescriptor(obj, key) : null; if (desc && (desc.get || desc.set)) { Object.defineProperty(newObj, key, desc); } else { newObj[key] = obj[key]; } } } newObj.default = obj; if (cache) { cache.set(obj, newObj); } return newObj; }
+
+const Select = ({
+  options = [],
+  label = "Please select an option",
+  onOptionSelected
+}) => {
+  const [isOpen, setIsOpen] = (0, _react.useState)(false);
+
+  const handleOptionSelected = (option, optionIndex) => {
+    setIsOpen(prev => !prev);
+    onOptionSelected?.(option, optionIndex);
+  };
+
+  const onLabelClick = () => {
+    setIsOpen(prev => !prev);
+  };
+
+  return _react.default.createElement("div", null, _react.default.createElement("button", {
+    onClick: () => onLabelClick()
+  }, label), isOpen && _react.default.createElement("ul", null, options.map((option, index) => {
+    return _react.default.createElement("li", {
+      key: option.value,
+      onClick: () => {
+        handleOptionSelected(option, index);
+      }
+    }, option.label);
+  })));
+};
+
+exports.default = Select;
+},{"react":"../../../node_modules/react/index.js"}],"../../../node_modules/@ds.e/react/lib/index.js":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -33064,6 +33107,12 @@ Object.defineProperty(exports, "Margin", {
     return _Margin.default;
   }
 });
+Object.defineProperty(exports, "Select", {
+  enumerable: true,
+  get: function () {
+    return _Select.default;
+  }
+});
 Object.defineProperty(exports, "Text", {
   enumerable: true,
   get: function () {
@@ -33079,8 +33128,10 @@ var _Margin = _interopRequireDefault(require("./atoms/Margin/Margin.js"));
 
 var _Text = _interopRequireDefault(require("./atoms/Text/Text.js"));
 
+var _Select = _interopRequireDefault(require("./molecules/Select/Select.js"));
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-},{"./atoms/Button/Button.js":"../../../node_modules/@ds.e/react/lib/atoms/Button/Button.js","./atoms/Color/Color.js":"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js","./atoms/Margin/Margin.js":"../../../node_modules/@ds.e/react/lib/atoms/Margin/Margin.js","./atoms/Text/Text.js":"../../../node_modules/@ds.e/react/lib/atoms/Text/Text.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
+},{"./atoms/Button/Button.js":"../../../node_modules/@ds.e/react/lib/atoms/Button/Button.js","./atoms/Color/Color.js":"../../../node_modules/@ds.e/react/lib/atoms/Color/Color.js","./atoms/Margin/Margin.js":"../../../node_modules/@ds.e/react/lib/atoms/Margin/Margin.js","./atoms/Text/Text.js":"../../../node_modules/@ds.e/react/lib/atoms/Text/Text.js","./molecules/Select/Select.js":"../../../node_modules/@ds.e/react/lib/molecules/Select/Select.js"}],"../../../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
 var bundleURL = null;
 
 function getBundleURLCached() {
@@ -33192,12 +33243,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var rootContainer = document.querySelector("#rout");
 var root = (0, _client.createRoot)(rootContainer);
-root.render(_react.default.createElement(_react2.Margin, {
-  left: true,
-  space: "none"
-}, _react.default.createElement(_react2.Text, {
-  size: "md"
-}, "this is some text"))); // css class in scss file을 사용해보자
+var options = [{
+  label: "Option 1",
+  value: "option-1"
+}, {
+  label: "Option 2",
+  value: "option-2"
+}, {
+  label: "Option 3",
+  value: "option-3"
+}];
+root.render(_react.default.createElement("div", null, _react.default.createElement(_react2.Select, {
+  options: options
+}))); // css class in scss file을 사용해보자
 },{"react":"../../../node_modules/react/index.js","react-dom/client":"../../../node_modules/react-dom/client.js","@ds.e/react":"../../../node_modules/@ds.e/react/lib/index.js","@ds.e/scss/lib/Button.css":"../../../node_modules/@ds.e/scss/lib/Button.css","@ds.e/scss/lib/Utilities.css":"../../../node_modules/@ds.e/scss/lib/Utilities.css","@ds.e/scss/lib/Margin.css":"../../../node_modules/@ds.e/scss/lib/Margin.css","@ds.e/scss/lib/Text.css":"../../../node_modules/@ds.e/scss/lib/Text.css"}],"../../../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';

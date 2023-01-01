@@ -180,3 +180,5 @@ export default {
   - "src/atoms/Margin"만 적어주면 에러 발생
 
 ## 32. The select molecule
+
+- Select 컴포넌트를 만들어보자
